@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Full Stack Developer Entry Exam - E-Commerce Project
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a simplified e-commerce application that includes frontend development. It features authentication, an admin panel for managing products and categories with drag-and-drop ordering, and a customer-side shopping experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+### 1. Authentication
+
+- User registration and login.
+- Password handling with BCrypt for encryption.
+- JWT-based authentication for enhanced security.
+
+### 2. Admin Panel (Product & Category Management)
+
+- CRUD operations for products (title, description, price) and categories (title, description).
+- Drag-and-drop functionality to reorder products and categories.
+- Persistent ordering stored in the database.
+
+### 3. Customer Interface
+
+- Displays categories and products after authentication.
+- Users can add products to a shopping cart.
+
+
+## Tech Stack
+
+### **Frontend**
+
+- **Framework:** Next.js (App Router, TypeScript)
+- **Styling:** Tailwind CSS, Material-UI (MUI)
+- **Interactivity:** dnd-kit (for drag-and-drop functionality)
+
+
+## Setup & Installation
+
+Follow these steps to clone the project and run it locally:
+
+### **Clone the Repository**
+
+```sh
+ git clone https://github.com/Firas-safa/exam.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```sh
+ cd exam
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+### **Set Up the Frontend**
 
-To learn more about Next.js, take a look at the following resources:
+#### **a. Navigate to the frontend folder**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+ cd frontend
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### **b. Install Dependencies**
 
-## Deploy on Vercel
+```sh
+ npm install  # or yarn install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### **c. Start the Development Server**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sh
+ npm run dev  # or yarn dev
+```
+
+The frontend should now be running on `http://localhost:3000/`.
+
+### **Test Authentication & Features**
+
+- Register a new user.
+- Log in and access the product categories.
+- Use the admin panel to add, update, delete, and reorder products and categories.
+- Try the drag-and-drop functionality and verify that ordering is saved.
+
+## Additional Notes
+
+- If using JWT authentication, ensure the frontend sends authentication tokens in API requests.
+- If running the project in production, configure environment variables properly.
+- Ensure the database is running before starting the backend server.
+
+## License
+
+This project is for educational and evaluation purposes only. Feel free to modify and improve it.
+
+---
+
+If you have any issues or questions, feel free to reach out!
+
